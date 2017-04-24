@@ -137,25 +137,25 @@
             </tr>
           </tfoot>
         </table>
-        <form class="orderForm" action="index.html" method="post">
+        <form class="orderForm" action="order.html" method="post">
           <div class="row">
             <div class="input-field col s12">
               <i class="prefix fa fa-user-circle  pink-text lighten-1"></i>
-              <input type="text" name="nameInput">
+              <input type="text" name="nameInput" required>
               <label for="nameInput">Name</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12">
               <i class="prefix fa fa-phone pink-text lighten-1"></i>
-              <input type="text" name="phoneNumber">
+              <input type="text" name="phoneNumber" required>
               <label for="phoneNumber">Phone Number</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12">
               <i class="prefix fa fa-building pink-text lighten-1"></i>
-              <textarea name="address" class="materialize-textarea"></textarea>
+              <textarea name="address" class="materialize-textarea" required></textarea>
               <label for="address">Address</label>
             </div>
           </div>

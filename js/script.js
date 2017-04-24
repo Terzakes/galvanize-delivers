@@ -1,14 +1,14 @@
 $(document).ready(function(){
   $('.button-collapse').sideNav();
   $('.parallax').parallax();
-  var $btn = $('.orderBtn');
+  const $btn = $('.orderBtn');
 
   $btn.click(function (event) {
-    var $target = event.target;
-    var tr = $('<tr>');
-    var tdCost = $('<td>');
-    var tdPrice = $('<td class="right">');
-    var tBody = $('tbody');
+    let $target = event.target;
+    const tr = $('<tr>');
+    const tdCost = $('<td>');
+    const tdPrice = $('<td class="right">');
+    const tBody = $('tbody');
     let item = $target.dataset.name;
     let price = $target.dataset.cost;
     let total = 0;
@@ -26,7 +26,6 @@ $(document).ready(function(){
     let $subTotal = $('#subTotal')
     for (let i = 1; i < $(tBody).children().children().length; i+=2) {
       itemCosts.push($($(tBody).children().children()[i]).text());
-      console.log(itemCosts);
     }
     for (let i = 0; i < itemCosts.length; i++) {
       let val = [];
@@ -43,14 +42,11 @@ $(document).ready(function(){
     taxAndTotal(total);
   }
   function taxAndTotal (total) {
-    let $tax = $('#tax');
-    let $total = $('#total');
-    let tax = 0.08845;
+    const $tax = $('#tax');
+    const $total = $('#total');
+    const tax = 0.08845;
     let itemsTax = (tax * total).toFixed(2);
     let sum = (Number(itemsTax) + Number(total)).toFixed(2);
-    console.log(total);
-    console.log(tax);
-    console.log(itemsTax);
     $tax.text(itemsTax);
     $total.text(sum);
   }
